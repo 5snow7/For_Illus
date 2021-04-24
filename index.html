@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    <title>For_Illus</title>
+
+    <script src="sketch.js"></script>
+    <script src="logo.js"></script>
+    <script src="stuff.js"></script>
+    <script src="line.js"></script> 
+      <script src="stuff2.js"></script> 
+      <script src="linRec.js"></script> 	  
+    <link rel="stylesheet" type="text/css" href="style.css">
+	
+</head>
+  
+  <body id="bod1" onkeydown="reStart()">
+  <canvas id="can1" width="1100" height="700"  >A CANVAS</canvas>
+ 
+  <input type="button" id="but1" value="click to run" onclick="start()">
+  <input type="button" id="but2" value="clear Canvas" onclick="clear_Can()">
+  <p id="par1">Hit Clear Canvas, then Enter len,sides,col, row and dblClick<input type="text" id="text1" value="30,8,4,5" ondblClick="chgTot()"></p>
+   
+   <p id="p1">
+   <input type="text" id="t1" value="200,7,3" ondblClick="runPolyExp()" >Enter len,sides,tt</p>
+   
+   <div id="divLabel">
+  <label for="chbox1" id="label1"><input type="checkbox" id="chbox1">nonGon w kochL</label>
+  <br>
+  <label for="chbox2" id="label2"><input type="checkbox" id="chbox2">nonGon w kochR</label>
+  <br>
+  <label for="chbox3" id="label3"><input type="checkbox" id="chbox3">nonGon w random Arc</label>
+  </div>
+</body>
+
+
+<script>
+let t=new logo(300,100,0,"can1","rgb(0,200,100)",1);
+let t2=new logo(150,200,-90,"can1","red",1);
+ let tot=""; let l=30,len=30,n=12,r=4,total=6;
+let l2=new line(20,30,"can1");
+let chbox1=document.getElementById("chbox1");
+chbox1.addEventListener('change',showKochL);
+let chbox2=document.getElementById("chbox2");
+chbox2.addEventListener('change',showKochR);
+let chbox3=document.getElementById("chbox3");
+chbox3.addEventListener('change',showarcRandom);
+
+ /*document.getElementById("inp1").addEventListener("keyup", func2);
+ */
+</script>
+ 
+
+</html>

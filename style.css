@@ -1,0 +1,7 @@
+#can1{border:red double 10px;}
+
+#but1{position:absolute;left:350px;top:50px;border:green solid 5px;}
+#but2{position:absolute;left:1200px;top:100px;border:green solid 5px;}
+#par1{position:absolute;left:1200px;top:150px;border:green solid 5px;width:200px;padding:10px;}
+#p1{position:absolute;left:1200px;top:260px;border:red solid 5px;width:200px;padding:10px;}
+#divLabel{position:absolute;left:1200px;top:370px;border:green solid 5px;width:200px;padding:10px;}
