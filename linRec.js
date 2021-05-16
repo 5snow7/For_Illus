@@ -33,6 +33,12 @@ function pentG(t,len,lev){
 }
 }
 
+
+
+
+
+
+
 function hilBert(t,len,lev,p){
 	if(lev==0){}
 	else{
@@ -42,6 +48,17 @@ function hilBert(t,len,lev,p){
     hilBert(t,len,lev-1,-1*p);t.lt(p*90);
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
 
 function arcR(t,len,fill){
 	t.lt(90);

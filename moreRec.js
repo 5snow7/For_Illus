@@ -1,36 +1,44 @@
-
-function start(){
-clear_Can(); 
-t.c.font="25px Forte";
-t.set1(50,250,-90);
-ch=event.key;
-
-t.c.fillText("key hit is "+ch,30,30);
-//rowPoly(t,40,10,5);t.fd(80);
-tesPoly(t,l,n,r,total);//nside must be even
-t.Col="red";
-t.set1(900,300,0);
-duoPoly(t,60,100,60,135);
-//poly(t,50,10);t.fd(100);
-//rowHex(t,50,8);t.fd(100);
-//tesHex(t,40,12,5);
-/*for(let j=0;j<(tot);j++){
-sq(t,j*10);t.Col="rgb("+10*j+",0,"+10*j+")";
-t.c.fillText("test "+j+"  "+tot,20,30+25*j);
-}
-stairSq(t,25,tot);*/
+function sqR(t,len){
+t.fd(len);t.rt(90);t.fd(len);t.rt(90);
+t.fd(len);t.rt(90);t.fd(len);t.rt(90);
+//t.rt(90);t.fd(len);t.lt(90);
 }
 
-function reStart1(){
-let ch=event.key;
+function sqHor(t,num,max){
+if(num==0){t.lt(90);t.fd(20*max);t.rt(90);t.bk(20);}//sqR(t,20);t.bk(20);}
+else{sqR(t,20);t.rt(90);t.fd(20);t.lt(90);sqHor(t,num-1,max);}
+}
+
+function sqRec(t,num){
+	for(let j=1;j<num;j++){
+		sqHor(t,j,j);
+}}
+
+function fibOne(t,lev){
+if(lev==0||lev==1){return 1;}
+else{return fibOne(t,lev-1)+fibOne(t,lev-2);}
+}
+///*************************************
+function runAlph(){
+	setInt=setInterval(funAlph,2000);
+}
+function funAlph(){
+reStart(alph[j]);
+	j++;
+	if(j>12){j=0;}
+}
+
+function stopAlph(){
+	clearInterval(setInt);
+}
+
+function reStart(ch){
 clear_Can();
 t.c.font="25px Eras Bold ITC";
 switch(ch){
     case 'a':
 	t.set1(10,550,0);t.Col="blue";
 	kochL(t,150,5);
-	t.c.font="30px";
-	t.c.fillText(alph[2],40,40);
 	break;
 	case 'b':
 	t.c.font="30px Eras Bold ITC";
@@ -88,7 +96,6 @@ switch(ch){
     t.c.fillText("Barnsley Leaf",30,30);
 	barnsL(t,250,Math.PI*15,12);
 	break;
-	
 	case 'm':
 	t.set1(300,250,-90);t.Col="rgb(200,150,200)";
     t.c.fillText("new recursion",30,30);
@@ -100,37 +107,3 @@ switch(ch){
 	break;
 	}
 }
-
-function showKochL(){
-   if(chbox1.checked){
-   clear_Can();   
-   t.set1(500,700,-90);
-    t.c.fillText("testing1",300,30);
-   nonGon3(3,t,200,3,kochL);}
-   else{clear_Can();}
-}
-
-function showKochR(){
-   if(chbox2.checked){
-   clear_Can();   
-   t.set1(500,700,-90);
-    t.c.fillText("testing2",300,30);
-   nonGon3(3,t,200,3,kochR);}
-   else{clear_Can();}
-}
-
-function showarcRandom(){
-   if(chbox3.checked){
-   clear_Can();   
-   t.set1(500,700,-90);
-    t.c.fillText("testing3",300,30);
-   nonGon3(3,t,6,3,arcRandom);}
-   else{clear_Can();}
-}
-
-
-function clear_Can(){
-	 let canA=document.getElementById("can1");
-	 let w=canA.width;
-	 canA.width=w;//clears the screen.
- }

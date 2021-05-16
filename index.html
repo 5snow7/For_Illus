@@ -13,11 +13,13 @@
     <script src="line.js"></script> 
       <script src="stuff2.js"></script> 
       <script src="linRec.js"></script> 	  
+	  <script src="moreRec.js"></script> 
+	  <script src="prac.js"></script> 
     <link rel="stylesheet" type="text/css" href="style.css">
 	
 </head>
   
-  <body id="bod1" onkeydown="reStart()">
+  <body id="bod1" onkeydown="reStart1()">
   <canvas id="can1" width="1100" height="700"  >A CANVAS</canvas>
  
   <input type="button" id="but1" value="click to run" onclick="start()">
@@ -35,9 +37,12 @@
   <label for="chbox3" id="label3"><input type="checkbox" id="chbox3">nonGon w random Arc</label>
   </div>
   <p id="explain">The letters a thru l are examples of fractals.  The first text box only works for even number of sides: Basically, 4,8,12 and 16 get u true tesselations. 6,10,14 are interesting and with lots row and columns, become more interesting.  But, still, they are not tesselations.  The second text box would take a while to explain its purpose, though it doesn't appear to be showing much.</p>
-</body>
+  <input type="button" id="but3" value="click to demo" onclick="runAlph()">
+  <input type="button" id="but4" value="click to stop demo" onclick="stopAlph()">
+  
+  </body>
 
-
+//"red"
 <script>
 let t=new logo(300,100,0,"can1","rgb(0,200,100)",1);
 let t2=new logo(150,200,-90,"can1","red",1);
@@ -49,7 +54,9 @@ let chbox2=document.getElementById("chbox2");
 chbox2.addEventListener('change',showKochR);
 let chbox3=document.getElementById("chbox3");
 chbox3.addEventListener('change',showarcRandom);
-
+let alph=['a','b','c','d','e','f','g','h','i','j','k','l','m'];
+let j=0;
+let setInt;
  /*document.getElementById("inp1").addEventListener("keyup", func2);
  */
 </script>
