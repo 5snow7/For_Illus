@@ -38,7 +38,7 @@ t.c.font="25px Eras Bold ITC";
 switch(ch){
     case 'a':
 	t.set1(10,550,0);t.Col="blue";
-	kochL(t,150,5);
+	kochL(t,170,5);
 	break;
 	case 'b':
 	t.c.font="30px Eras Bold ITC";

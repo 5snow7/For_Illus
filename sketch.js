@@ -5,7 +5,7 @@ t.c.font="25px Forte";
 t.set1(50,250,-90);
 ch=event.key;
 
-t.c.fillText("key hit is "+ch,30,30);
+t.c.fillText("Key that is hit is "+ch,30,30);
 //rowPoly(t,40,10,5);t.fd(80);
 tesPoly(t,l,n,r,total);//nside must be even
 t.Col="red";
@@ -22,7 +22,7 @@ stairSq(t,25,tot);*/
 }
 
 function reStart1(){
-let ch=event.key;
+ ch=event.key;
 clear_Can();
 t.c.font="25px Eras Bold ITC";
 switch(ch){
